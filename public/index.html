@@ -11,6 +11,16 @@
 <body>
   <div id="app">
 
+    <form v-on:submit.prevent="saveNewTask">
+      <label for="new-task">Add a new task:</label>
+      <input id="new-task" type="text" v-model="newTask"/>
+      <input type="submit" value ="Save New Task" />
+    </form>
+
+    <ul>
+      <li v-for="task in tasks">{{task.name}}</li>
+    </ul>
+
   </div>
 </body>
 </html>
